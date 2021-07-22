@@ -1,3 +1,4 @@
+
 import React from 'react';
 import styled from "styled-components"
 
@@ -24,3 +25,5 @@ class Filters extends React.Component {
 }
 
 export default Filters ;
+
+import React from 'react'

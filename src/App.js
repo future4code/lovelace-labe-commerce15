@@ -1,4 +1,5 @@
 import React from 'react';
+
 import styled from 'styled-components';
 import Products from './components/Products';
 import Filters from './components/Filters';
@@ -40,10 +41,27 @@ class App extends React.Component {
 
           </Products>
         </Home>
+
+import styled from 'styled-components'
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Filters>
+
+        </Filters>
+        <Products>
+          <ProductCard>
+
+          </ProductCard>
+        </Products>
+
         <ShoppingCart>
           <ShoppingCartItem>
 
           </ShoppingCartItem>
+
 
         </ShoppingCart>
 
@@ -52,6 +70,12 @@ class App extends React.Component {
       </Espacamento>
     )
 
+  }
+
+
+        </ShoppingCart>
+      </div>
+    )
   }
 
 }
