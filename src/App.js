@@ -31,7 +31,7 @@ const products = [
   },
   {
     id: 3,
-    name: "Produto 3",
+    name: "Produto 6",
     price: 30,
     photo: "https://picsum.photos/200/200?a=3"
   },
