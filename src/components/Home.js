@@ -6,10 +6,10 @@ class Home extends React.Component {
   render() {
     return (
       <div >
-        <h2>Contidada de Produtos</h2>
+        <h2>Quantidade de Produtos</h2>
         <h2>Ordenação</h2>
         <select>
-          <option>decreste</option>
+          <option>decrescente</option>
           <option>crescente</option>
           </select>      
       <Products>
