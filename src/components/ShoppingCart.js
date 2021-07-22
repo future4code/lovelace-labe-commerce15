@@ -6,16 +6,11 @@ class ShoppingCart extends React.Component {
   render() {
     return (
       <div >
-          <h2>Carrinho</h2>
-          <ShoppingCartItem>
-              
-          </ShoppingCartItem>
-
+        <h2>Carrinho</h2>
+        {/* <ShoppingCartItem /> */}
       </div>
     )
-
   }
-
 }
 
 export default ShoppingCart;

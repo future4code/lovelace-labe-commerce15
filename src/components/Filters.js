@@ -15,12 +15,9 @@ class Filters extends React.Component {
           <p>Busca por nome</p>
           <input>
           </input>
-
       </div>
     )
-
   }
-
 }
 
 export default Filters ;
