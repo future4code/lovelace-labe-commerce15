@@ -10,19 +10,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Filters>
 
-        </Filters>
-        <Products>
-          <ProductCard>
-
-          </ProductCard>
-        </Products>
-        <ShoppingCart>
-          <ShoppingCartItem>
-
-          </ShoppingCartItem>
-        </ShoppingCart>
       </div>
     )
   }
