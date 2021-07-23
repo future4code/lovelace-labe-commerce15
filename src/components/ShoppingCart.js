@@ -7,7 +7,6 @@ class ShoppingCart extends React.Component {
     return (
       <div >
         <h2>Carrinho</h2>
-        {/* <ShoppingCartItem /> */}
       </div>
     )
   }

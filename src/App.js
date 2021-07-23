@@ -16,42 +16,39 @@ class App extends React.Component {
   state = {
     produtos: [
       {
-        id: Date.now(),
+        id: "1",
         nome: "produto01",
         preco: "100",
         imagem: "https://picsum.photos/seed/picsum/200/300"
       },
       {
-        id: Date.now(),
+        id: "2",
         nome: "produto02",
-        preco: "100",
+        preco: "1000",
+        imagem: "https://picsum.photos/seed/picsum/200/300"
+      },
+      {
+        id: "3",
+        nome: "produto03",
+        preco: "500",
         imagem: "https://picsum.photos/seed/picsum/200/300"
       }
     ],
     carrinho: []
-      // {
-      //   quantidade: 10,
-      //   preco: "",
-      //   produto: ""
-      // }
   }
 
   addCarrinho = () => {
     const novoCarrinho = [
-      ...this.state.carrinho,
+      ...this.state.produtos,
       {
-        id: Date.now(),
-        nome: "produto02",
-        preco: "100",
-        imagem: "https://picsum.photos/seed/picsum/200/300"
-      }
+        id: this.state.produtos.id,
+        nome: this.state.produtos.nome,
+        preco: this.state.produtos.preco
+      },
     ]
-    console.log(this.novoCarrinho)
+
     this.setState({
       carrinho: novoCarrinho,
-      // quantidade: 80,
-      // preco: 50.00,
-      // produto: "x"
     })
   }
 
@@ -60,12 +57,8 @@ class App extends React.Component {
     return (
       <Espacamento>
         <Filters />
-        {/* <Home> */}
-          <Products adicionarCarrinho={this.addCarrinho}/>
-        {/* </Home> */}
-        {/* <ShoppingCart> */}
-          <ShoppingCartItem adicionarCarrinho={this.addCarrinho} carrinho={this.state.carrinho}/>
-        {/* </ShoppingCart> */}
+          <Products adicionarCarrinho={this.addCarrinho} adicionarProdutos={this.state.produtos}/>
+          <ShoppingCartItem  adicionarCarrinho={this.addCarrinho} carrinho={this.state.carrinho}/>
       </Espacamento>
     )
   }

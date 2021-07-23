@@ -3,14 +3,12 @@ import styled from "styled-components"
 
 class ShoppingCartItem extends React.Component {
   render() {
-    // console.log(this.props)
-    // console.log(this.props.carrinho)
     const listaDoCarrinho = this.props.carrinho.map((item, index) => {
       return (
         <div key={index}>
-          <span>{item.quantidade}</span>
-          <span>{item.preco}</span>
-          <span>{item.produto}</span>
+          <p>{item.id}</p>
+          <p>{item.nome}</p>
+          <p>{item.preco}</p>
         </div>
       )
     })
