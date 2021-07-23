@@ -3,13 +3,21 @@ import { ShoppingCartItem } from "./ShoppingCartItem";
 import styled from "styled-components";
 
 const ShoppingCartContainer = styled.div`
-  border: 1px solid black;
+  
+ 
   padding: 8px;
+p{
+  border-radius: 1rem;
+ background-color: rgb(26,90,770);
+ padding: 0.35em;
+ color: white;
+}
 `;
 
 const CartListContainer = styled.div`
   display: grid;
   gap: 8px;
+  
 `;
 
 export class ShoppingCart extends React.Component {

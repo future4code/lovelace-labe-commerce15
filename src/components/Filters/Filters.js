@@ -2,15 +2,19 @@ import React from "react";
 import styled from "styled-components";
 
 const FiltersContainer = styled.div`
-  border: 1px solid black;
-  padding: 8px;
+ 
+  padding-bottom: 6em;
+  margin-top: 0;
+
 `;
+
 
 const InputContainer = styled.label`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 8px;
+  margin: 0em;
+  
 `;
 
 export class Filters extends React.Component {
@@ -35,9 +39,10 @@ export class Filters extends React.Component {
           />
         </InputContainer>
         <InputContainer>
-          Busca Por
+          Busca por
           <br></br>
           Palavra-Chave:
+          
           <input
             type="text"
             value={this.props.nameFilter}

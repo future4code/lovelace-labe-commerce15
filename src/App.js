@@ -3,7 +3,9 @@ import { Filters } from "./components/Filters/Filters";
 import { Products } from "./components/Products/Products";
 import { ShoppingCart } from "./components/ShoppingCart/ShoppingCart";
 import styled from "styled-components";
-import { Title } from "./components/styles";
+import { Title,ImageBackground } from "./components/styles";
+
+
 
 
 
@@ -13,6 +15,16 @@ const AppContainer = styled.div`
   grid-template-columns: 1fr 3fr 1fr;
   padding: 16px;
   gap: 8px;
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+  h5{
+    font-size:4rem;
+    padding: 0rem;
+    margin: 0vh;
+  }
+ 
+  
   
 `;
 
@@ -25,21 +37,57 @@ const products = [
   },
   {
     id: 2,
-    name: "Inteligência Artificial by Felipe Gushiken",
-    price: 200,
+    name: "Inteligência Artificial by Ramon Dias",
+    price: 200000,
     photo: "https://picsum.photos/200/200?a=7"
   },
   {
     id: 3,
-    name: "Produto 6",
+    name: "Carcaça da Space X",
     price: 30,
     photo: "https://picsum.photos/200/200?a=3"
   },
   {
     id: 4,
-    name: "Produto 4",
-    price: 10,
+    name: "Base de Alcântara ",
+    price: 10000,
     photo: "https://picsum.photos/200/200?a=4"
+  },
+  {
+    id: 5,
+    name: "Pet Cósmico ",
+    price: 5555555,
+    photo: "https://picsum.photos/200/200?a=5"
+  },
+  {
+    id: 6,
+    name: "Foquetinho ",
+    price: 1555,
+    photo: "https://picsum.photos/200/200?a=6"
+  },
+  {
+    id: 7,
+    name: "Minérios Espaciais ",
+    price: 1450,
+    photo: "https://picsum.photos/200/200?a=7"
+  },
+  {
+    id: 8,
+    name: "Projeto de Base Espacial ",
+    price: 99868,
+    photo: "https://picsum.photos/200/200?a=8"
+  },
+  {
+    id: 9,
+    name: "Meteorito ",
+    price: 1654564,
+    photo: "https://picsum.photos/200/200?a=9"
+  },
+  {
+    id: 10,
+    name: "Lixo Espacial ",
+    price: 1214,
+    photo: "https://picsum.photos/200/200?a=10"
   }
 ];
 
@@ -51,18 +99,12 @@ class App extends React.Component {
     productsInCart: [
       {
         id: 4,
-        name: "Produto 4",
+        name: "Produto de Exemplo",
         price: 10,
         photo: "https://picsum.photos/200/200?a=4",
-        quantity: 1
+        quantity:0
       },
-      {
-        id: 3,
-        name: "Produto 3",
-        price: 30,
-        photo: "https://picsum.photos/200/200?a=3",
-        quantity: 2
-      }
+    
     ]
   };
 
@@ -126,8 +168,11 @@ class App extends React.Component {
 
   render() {
     return (
+      <ImageBackground>
       <AppContainer>
-       <h1>lkjlkj</h1>
+      
+        
+       <h5>AstroAmazon</h5>
        <Title>
         <Filters
           minFilter={this.state.minFilter}
@@ -152,6 +197,7 @@ class App extends React.Component {
         />
        
       </AppContainer>
+      </ImageBackground>
     );
   }
 }

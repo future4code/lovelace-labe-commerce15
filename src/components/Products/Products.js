@@ -4,8 +4,8 @@ import styled from "styled-components";
 
 const ProductsContainer = styled.div`
   img {
-    width: 38vh;
-    height: 38vh;
+    width: 100%;
+    height: 45vh;
   }
 `;
 
@@ -16,13 +16,22 @@ const ProductsHeader = styled.div`
   padding: 0 16px;
   font-weight:bolder;
   font-size: 150%;
+  margin-right: 2em;
+  select{
+    margin-left: 1em;
+  }
 `;
+
 
 const ProductsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 0.8fr);
   gap: 16px;
   padding: 16px;
+  background-color:midnightblue;
+  img{
+    width: 100%;
+  }
 `;
 
 export class Products extends React.Component {
@@ -57,9 +66,9 @@ export class Products extends React.Component {
     return (
       <ProductsContainer>
         <ProductsHeader>
-          <p>Quantidade de produtos: {filteredAndOrderedList.length}</p>
+          <p>Produtos encontrados: {filteredAndOrderedList.length}</p>
           <label>
-            Ordenação:
+            Pesquisar por : 
             <select value={this.state.sort} onChange={this.onChangeSort}>
               <option value={"CRESCENTE"}>Crescente</option>
               <option value={"DECRESCENTE"}>Decrescente</option>

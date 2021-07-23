@@ -11,6 +11,7 @@ const CardInfo = styled.div`
   display: flex;
   flex-direction: column;
   padding: 16px;
+  background-color: tomato;
 
   p {
     margin: 4px 0;
@@ -23,6 +24,7 @@ const AddToCartButton = styled.button`
   font-style: italic;
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 3rem;
+  
 `;
 
 export class ProductCard extends React.Component {
